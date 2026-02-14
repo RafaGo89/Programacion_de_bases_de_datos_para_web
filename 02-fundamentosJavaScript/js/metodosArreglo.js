@@ -34,6 +34,11 @@ console.log(may50);
 const may40 = a2.find(x => x > 40);
 console.log(may40);
 
+const may40bis = a2.find(function (x) {
+  return x > 40;
+});
+console.log(may40bis);
+
 const idxMay60 = a2.findIndex(x => x > 60);
 console.log(idxMay60);
 

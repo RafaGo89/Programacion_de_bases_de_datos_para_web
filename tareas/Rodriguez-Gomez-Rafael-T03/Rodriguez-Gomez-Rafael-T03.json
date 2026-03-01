@@ -1,0 +1,219 @@
+{
+  "info": {
+    "_postman_id": "cb1c7525-c410-45b4-92a9-4bf18f492ecb",
+    "name": "Rodriguez-Gomez-Rafael-T03",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52773473",
+    "_collection_link": "https://go.postman.co/collection/52773473-cb1c7525-c410-45b4-92a9-4bf18f492ecb?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET_pagina_principal",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:3004",
+          "host": [
+            "localhost"
+          ],
+          "port": "3004"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET_todos_los_equipos",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:3004/equipos",
+          "host": [
+            "localhost"
+          ],
+          "port": "3004",
+          "path": [
+            "equipos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET_equipo_id_2",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:3004/equipos/2",
+          "host": [
+            "localhost"
+          ],
+          "port": "3004",
+          "path": [
+            "equipos",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST_nuevo_equipo_JSON",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombreEquipo\": \"Club Deportivo Guadalajara\",\r\n    \"anioFundacion\": 1906,\r\n    \"pais\": \"México\",\r\n    \"publicadoPor\": \"Natalia Otero\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:3004/equipos",
+          "host": [
+            "localhost"
+          ],
+          "port": "3004",
+          "path": [
+            "equipos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST_nuevo_equipo_urlencoded",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "nombreEquipo",
+              "value": "Club Atlético Boca Juniors",
+              "type": "text",
+              "uuid": "d9e7178b-d017-4085-9e01-072bd4e25e13"
+            },
+            {
+              "key": "anioFundacion",
+              "value": "1905",
+              "type": "text",
+              "uuid": "9a406497-3888-4244-8da1-71fb78c9618b"
+            },
+            {
+              "key": "pais",
+              "value": "Argentina",
+              "type": "text",
+              "uuid": "ac603567-4bf1-4fa3-9873-a213d0509221"
+            },
+            {
+              "key": "publicadoPor",
+              "value": "Natalia Otero",
+              "type": "text",
+              "uuid": "733cd2c1-ce36-41d6-be04-f47eb21d0b02"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:3004/equipos",
+          "host": [
+            "localhost"
+          ],
+          "port": "3004",
+          "path": [
+            "equipos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PATCH_modificar_equipo_id_1",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "nombreEquipo",
+              "value": "Clube de Regatas do Flamengo",
+              "type": "text",
+              "uuid": "32441e5a-33ad-4bca-9bc1-34cc31594d65"
+            },
+            {
+              "key": "anioFundacion",
+              "value": "1895",
+              "type": "text",
+              "uuid": "731b68cf-e980-4cb0-a5f4-95182ded3a6b"
+            },
+            {
+              "key": "pais",
+              "value": "Brasil",
+              "type": "text",
+              "uuid": "e308d807-50eb-4c5d-aa63-fa363737f4da"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:3004/equipos/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "3004",
+          "path": [
+            "equipos",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE_equipo_id_1",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "localhost:3004/equipos/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "3004",
+          "path": [
+            "equipos",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -60,6 +60,10 @@ app.get("/equipos/:id", (req, res) => {
 
 // POST para subir un nuevo equipo de fútbol
 app.post("/equipos", (req, res) => {
+    // Verificar si el body está vacío
+    if (!req.body) {
+        return res.status(400).json({ mensaje: "Datos enviados incompletos" });
+    }
     // Recibir la información del nuevo equipo contenido
     // en el cuerpo de la petición
     let { nombreEquipo, anioFundacion, pais, publicadoPor } = req.body;

@@ -75,6 +75,11 @@ app.get("/blogposts/:id", (req, res) => {
 
 // POST para subir un nuevo posteo al servidor
 app.post("/blogposts", (req, res) => {
+    // Verificar si el body está vacío
+    if (!req.body) {
+        return res.status(400).json({ message: "Datos imcompletos" });
+    }
+
     // Recibir la información del nuevo posteo contenido en el
     // cuerpo de la petición del cliente
     // leer los elementos por desestructuración

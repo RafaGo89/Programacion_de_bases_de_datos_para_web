@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo EJS</title>
+  </head>
+  <body>
+    <header>
+      <!--  Código que es común a todas las páginas en el encabezado  -->
+      <%- include('../partials/header') %>
+    </header>
+    <h1>EJS Demo</h1>
+    <h2>Variable</h2>
+    <p><%= tagline %></p>
+    <p><%- conFormato %></p>
+
+    <!-- Lista no ordenada de mascotas-->
+    <ul>
+      <% mascots.forEach(mascot => { %>
+      <li>
+        <strong><%= mascot.name %></strong> representando a <%=
+        mascot.organization %>, nacida en el año <%= mascot.birth_date %>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>

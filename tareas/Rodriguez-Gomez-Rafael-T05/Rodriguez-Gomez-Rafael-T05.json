@@ -1,0 +1,203 @@
+{
+  "info": {
+    "_postman_id": "e4133175-9b43-4d12-8dc8-f43c89d5f0d7",
+    "name": "Rodriguez-Gomez-Rafael-T05",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52773473",
+    "_collection_link": "https://go.postman.co/collection/52773473-e4133175-9b43-4d12-8dc8-f43c89d5f0d7?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "POST_nuevo_equipo_urlencoded",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "nombreEquipo",
+              "value": "Sunderland Association Football Club",
+              "type": "text",
+              "uuid": "8602b2e2-1f58-4140-af2b-dbdbea04d542"
+            },
+            {
+              "key": "anioFundacion",
+              "value": "1879",
+              "type": "text",
+              "uuid": "8f590c4d-ff66-4096-ae04-99208f3a6788"
+            },
+            {
+              "key": "pais",
+              "value": "Inglaterra",
+              "type": "text",
+              "uuid": "bf8ce5e9-744c-4b58-a958-693eab154e38"
+            },
+            {
+              "key": "publicadoPor",
+              "value": "Rafael Rodríguez",
+              "type": "text",
+              "uuid": "ec75dd54-0bb7-4078-b305-e515a6edb4d0"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:4007/equipos",
+          "host": [
+            "localhost"
+          ],
+          "port": "4007",
+          "path": [
+            "equipos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST_nuevo_equipo_json",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombreEquipo\": \"Amsterdamsche Football Club Ajax\",\r\n    \"anioFundacion\": 1900,\r\n    \"pais\": \"Países Bajos\",\r\n    \"publicadoPor\": \"Natalia Otero\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:4007/equipos",
+          "host": [
+            "localhost"
+          ],
+          "port": "4007",
+          "path": [
+            "equipos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET_pagina_principal",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:4007",
+          "host": [
+            "localhost"
+          ],
+          "port": "4007"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET_todos_los_equipos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:4007/equipos",
+          "host": [
+            "localhost"
+          ],
+          "port": "4007",
+          "path": [
+            "equipos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET_equipo_por_id",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:4007/equipos/69aca4e1be44bac86694b48f",
+          "host": [
+            "localhost"
+          ],
+          "port": "4007",
+          "path": [
+            "equipos",
+            "69aca4e1be44bac86694b48f"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PATCH_equipo_por_id",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombreEquipo\": \"Newcastle United Football Club\",\r\n    \"anioFundacion\": 1892,\r\n    \"publicadoPor\": \"Jorge Ortiz\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:4007/equipos/69b5de257e59977a5cd16cfe",
+          "host": [
+            "localhost"
+          ],
+          "port": "4007",
+          "path": [
+            "equipos",
+            "69b5de257e59977a5cd16cfe"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE_equipo_por_id",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "localhost:4007/equipos/69b5de257e59977a5cd16cfe",
+          "host": [
+            "localhost"
+          ],
+          "port": "4007",
+          "path": [
+            "equipos",
+            "69b5de257e59977a5cd16cfe"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -9,7 +9,13 @@ const authControllers = require("../controllers/authControllers");
 // GET para la página de un nuevo usuario
 router.get("/new", usersControllers.getNewUser);
 
+// GET para la página de inicio de sesión
+router.get("/login", usersControllers.getLogInUser);
+
 // POST para crear un nuevo usuario
 router.post("/signup", authControllers.signup);
+
+// POST para iniciar sesión
+router.post("/signin", authControllers.signin);
 
 module.exports = router;

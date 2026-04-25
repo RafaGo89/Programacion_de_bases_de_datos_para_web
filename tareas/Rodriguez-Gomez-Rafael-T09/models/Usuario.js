@@ -63,8 +63,17 @@ usuarioEsquema.pre("save", async function (next) {
     this.passwordConfirm = undefined;
 
     // Continuar con el siguiente elemento del middleware
-    next();
+    next;
 });
+
+/**
+ * Método de instancia (del usuario) para comprobar si la contraseña provista
+ * por el usuario al inciar sesión corresponde o no a la contraseña guardada en
+ * la base de datos de ese usuario.
+ */
+usuarioEsquema.methods.correctPassword = async function (candidatePassword) {
+    return await brcrypt.compare(candidatePassword, this.password);
+};
 
 // Crear el modelo apartir del esquema
 const Usuario = mongoose.model("Usuario", usuarioEsquema);
